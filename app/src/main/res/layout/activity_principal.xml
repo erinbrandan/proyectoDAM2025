@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Principal">
+    <!--android:background="@drawable/splash_background"-->
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imaBoton1_principal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="Botón para regresar a la pantalla principal"
+            android:scaleType="centerInside"
+            android:src="@drawable/ayuda" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/texto1_principal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:text="Inicio"
+        android:textColor="#1B1A1A"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+
+        android:id="@+id/layoutMisCitas_principal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fondo_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutBusquedaDoctor_principal"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="ExtraText,MissingConstraints">
+
+            <TextView
+                android:id="@+id/texto4_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Citas"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texto5_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Próximas citas"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ima2_principal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Imagen mis citas"
+            android:src="@drawable/calendarioazul" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBusquedaDoctor_principal"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fondo_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto1_principal"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:id="@+id/texto2_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nueva cita"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texto3_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encuentre un doctor cerca de usted"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="4dp"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="2dp">
+
+            <ImageView
+                android:id="@+id/ima1_principal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Imagen mis citas"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doctor" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMisDocumentos_principal"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fondo_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMisCitas_principal"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="ExtraText">
+
+            <TextView
+                android:id="@+id/texto6_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis documentos"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texto7_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accede a sus documentos"
+                android:textColor="#888888"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ima3_principal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Imagen mis citas"
+            android:src="@drawable/documentos" />
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        style="@style/BottomNavStyle"
+        android:layout_width="410dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/windowBackground"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutMisDocumentos_principal"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/botones_nav_menu"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
